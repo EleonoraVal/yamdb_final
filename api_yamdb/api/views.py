@@ -1,7 +1,7 @@
 from django.db.models import Avg
-
 from rest_framework import filters, viewsets
 from rest_framework.generics import get_object_or_404
+from reviews.models import Category, Genre, Review, Title
 
 from .filters import TitleFilter
 from .mixins import CreateListDestroyViewSet
@@ -9,8 +9,6 @@ from .permissions import IsAdminOrReadOnly, IsAuthorOrStaffOrReadOnly
 from .serializers import (CategorySerializer, CommentSerializer,
                           GenreSerializer, ReviewSerializer, TitleSerializer,
                           TitleSerializerCreate)
-
-from reviews.models import Category, Genre, Review, Title
 
 
 class TitleViewSet(viewsets.ModelViewSet):
@@ -63,11 +61,10 @@ class CommentViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthorOrStaffOrReadOnly,)
 
     def get_review(self):
-        review = get_object_or_404(
+        return get_object_or_404(
             Review,
             id=self.kwargs.get('review_id'),
         )
-        return review
 
     def perform_create(self, serializer):
         review = self.get_review()
