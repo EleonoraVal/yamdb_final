@@ -74,4 +74,4 @@ jobs:
           sudo docker pull eleonorad/yamdb_final:v1
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 8000:8001 eleonorad/yamdb_final:v1
+          sudo docker run --rm -d -p 3000:3000 eleonorad/yamdb_final:v1
