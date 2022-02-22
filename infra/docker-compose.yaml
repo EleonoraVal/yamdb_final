@@ -12,6 +12,7 @@ services:
     build:
       context: ..
       dockerfile: api_yamdb/Dockerfile
+    image: eleonorad/yamdb_final:v1
     restart: always
     volumes:
       - static_value:/app/static/
