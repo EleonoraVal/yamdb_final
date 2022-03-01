@@ -147,6 +147,4 @@ dmypy.json
 
 # папки со статикой и медиа
 api_yamdb/static/data/
-posts/static/
-media/
 
