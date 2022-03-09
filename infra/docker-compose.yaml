@@ -11,7 +11,7 @@ services:
   web:
     build:
       context: ..
-      dockerfile: Dockerfile
+      dockerfile: api_yamdb/Dockerfile
     image: eleonorad/yamdb_final:v1
     restart: always
     volumes:
