@@ -77,6 +77,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
         script: |
+            sudo docker pull eleonorad/yamdb_final:v1
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
