@@ -9,6 +9,9 @@ services:
     env_file:
       - ./.env
   web:
+    build:
+      context: ..
+      dockerfile: Dockerfile
     image: eleonorad/yamdb_final:v1
     restart: always
     volumes:
