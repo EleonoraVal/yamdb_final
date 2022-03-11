@@ -56,5 +56,8 @@ docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input
 ```
 
-### Развернутый и запущенный на сервере проектт:
-https://mysocialnetwork.ddns.net
+### Описание проекта:
+http://mysocialnetwork.ddns.net/redoc/
+
+### Администрирование Django:
+http://mysocialnetwork.ddns.net/admin/login/?next=/admin/
